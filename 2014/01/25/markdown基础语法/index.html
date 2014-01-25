@@ -1,0 +1,453 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>MarkDown基础语法 | NetAnt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="NetAnt">
+    
+    <meta name="description" content="Markdown 语法简明手册
+1. 使用  和 * 表示斜体和粗体
+示例：
+这是 斜体，这是 粗体。
+2. 使用 === 表示一级标题，使用 --- 表示二级标题
+示例：
+这是一个一级标题
+这是一个二级标题
+这是一个三级标题
+你也可以选择在行首加井号表示不同级别的标题，例如：# H1, ## H2">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="NetAnt" title="NetAnt"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="NetAnt">NetAnt</a></h1>
+				<h2 class="blog-motto">一只网络小蚂蚁的开发之旅</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form></li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2014/01/25/markdown基础语法/" title="MarkDown基础语法" itemprop="url">MarkDown基础语法</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://yoursite.com" title="NetAnt">NetAnt</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2014-01-25T03:07:35.000Z" itemprop="datePublished">1月 25 2014</time>
+    更新日期:<time datetime="2014-01-25T03:09:10.000Z" itemprop="dateModified">1月 25 2014</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#markdown-"><span class="toc-number">1.</span> <span class="toc-text">Markdown 语法简明手册</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-"><span class="toc-number">1.0.1.</span> <span class="toc-text"> 表示斜体和粗体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 使用 === 表示一级标题，使用 --- 表示二级标题</span></a></li></ol></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#-"><span class="toc-number">2.</span> <span class="toc-text">这是一个一级标题</span></a></li><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#-"><span class="toc-number">2.1.</span> <span class="toc-text">这是一个二级标题</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-"><span class="toc-number">2.1.1.</span> <span class="toc-text">这是一个三级标题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-"><span class="toc-number">2.1.2.</span> <span class="toc-text">3. 使用 [描述](链接地址) 为文字增加外链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-"><span class="toc-number">2.1.3.</span> <span class="toc-text">4. 在行末加两个空格表示换行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-"><span class="toc-number">2.1.4.</span> <span class="toc-text">5. 使用 *，+，- 表示无序列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-"><span class="toc-number">2.1.5.</span> <span class="toc-text">6. 使用数字和点表示有序列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-"><span class="toc-number">2.1.6.</span> <span class="toc-text">7. 使用 &gt; 表示文字引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-"><span class="toc-number">2.1.7.</span> <span class="toc-text">8. 使用 `代码` 表示行内代码块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-"><span class="toc-number">2.1.8.</span> <span class="toc-text">9.  使用 四个缩进空格 表示代码块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-"><span class="toc-number">2.1.9.</span> <span class="toc-text">10.  使用 ![描述](图片链接地址) 插入图像</span></a></li></ol></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#cmd-"><span class="toc-number">3.</span> <span class="toc-text">Cmd 高阶语法手册</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-latex-"><span class="toc-number">3.0.1.</span> <span class="toc-text">1. LaTeX 公式，表达式支持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-"><span class="toc-number">3.0.2.</span> <span class="toc-text">2. 加强的代码块，支持四十一种编程语言的语法高亮的显示，行号显示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-"><span class="toc-number">3.0.3.</span> <span class="toc-text">3. 表格支持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-"><span class="toc-number">3.0.4.</span> <span class="toc-text">4. 定义型列表</span></a></li></ol>
+		</div>
+		
+		<h1 id="markdown-">Markdown 语法简明手册</h1>
+<h3 id="1-">1. 使用 <em> 和 *</em> 表示斜体和粗体</h3>
+<p>示例：</p>
+<p>这是 <em>斜体</em>，这是 <strong>粗体</strong>。</p>
+<h3 id="2-">2. 使用 === 表示一级标题，使用 --- 表示二级标题</h3>
+<p>示例：</p>
+<h1 id="-">这是一个一级标题</h1>
+<h2 id="-">这是一个二级标题</h2>
+<h3 id="-">这是一个三级标题</h3>
+<p>你也可以选择在行首加井号表示不同级别的标题，例如：# H1, ## H2, ### H3。</p>
+<h3 id="3-">3. 使用 [描述](链接地址) 为文字增加外链接</h3>
+<p>示例：</p>
+<p>这是去往 <a href="http://ghosertblog.github.com" target="_blank">本人博客</a> 的链接。</p>
+<h3 id="4-">4. 在行末加两个空格表示换行</h3>
+<p>示例：</p>
+<p>第一行(此行最右有两个看不见的空格)<br>第二行</p>
+<h3 id="5-">5. 使用 *，+，- 表示无序列表</h3>
+<p>示例：</p>
+<ul>
+<li>无序列表项 一</li>
+<li>无序列表项 二</li>
+<li>无序列表项 三</li>
+</ul>
+<h3 id="6-">6. 使用数字和点表示有序列表</h3>
+<p>示例：</p>
+<ol>
+<li>有序列表项 一</li>
+<li>有序列表项 二</li>
+<li>有序列表项 三</li>
+</ol>
+<h3 id="7-">7. 使用 &gt; 表示文字引用</h3>
+<p>示例：</p>
+<blockquote>
+<p>野火烧不尽，春风吹又生</p>
+</blockquote>
+<h3 id="8-">8. 使用 `代码` 表示行内代码块</h3>
+<p>示例：</p>
+<p>让我们聊聊 <code>html</code></p>
+<h3 id="9-">9.  使用 四个缩进空格 表示代码块</h3>
+<p>示例：</p>
+<pre><code>这是一个代码块，此行左侧有四个不可见的空格
+</code></pre><h3 id="10-">10.  使用 ![描述](图片链接地址) 插入图像</h3>
+<p>示例：</p>
+<p><img src="http://tp3.sinaimg.cn/2204681022/180/5606968568/1" alt="我的头像"></p>
+<h1 id="cmd-">Cmd 高阶语法手册</h1>
+<h3 id="1-latex-">1. LaTeX 公式，表达式支持</h3>
+<p>$ 表示行内公式： </p>
+<p>质能守恒方程可以用一个很简洁的方程式 $E=mc^2$ 来表达</p>
+<p>$$ 表示整行公式：</p>
+<p>$$\sum_{i=1}^n a_i=0$$</p>
+<p>$$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $$</p>
+<p>$$\sum^{j-1}<em>{k=0}{\widehat{\gamma}</em>{kj} z_k}$$</p>
+<h3 id="2-">2. 加强的代码块，支持四十一种编程语言的语法高亮的显示，行号显示</h3>
+<p>非代码示例：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>$ sudo apt<span class="attribute">-get</span> install vim<span class="attribute">-gnome</span>
+</pre></td></tr></table></figure>
+
+<p>Python 示例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="code"><pre><span class="decorator">@requires_authorization</span>
+<span class="function"><span class="keyword">def</span> <span class="title">somefunc</span><span class="params">(param1=<span class="string">''</span>, param2=<span class="number">0</span>)</span>:</span>
+    <span class="string">'''A docstring'''</span>
+    <span class="keyword">if</span> param1 &gt; param2: <span class="comment"># interesting</span>
+        <span class="keyword">print</span> <span class="string">'Greater'</span>
+    <span class="keyword">return</span> (param2 - param1 + <span class="number">1</span>) <span class="keyword">or</span> <span class="keyword">None</span>
+
+<span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span>
+    <span class="keyword">pass</span>
+
+<span class="prompt">&gt;&gt;&gt; </span>message = <span class="string">'''interpreter
+<span class="prompt">... </span>prompt'''</span>
+</pre></td></tr></table></figure>
+
+<p>JavaScript 示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="code"><pre><span class="comment">/**
+* nth element in the fibonacci series.
+* @param n &gt;= 0
+* @return the nth element, &gt;= 0.
+*/</span>
+<span class="function"><span class="keyword">function</span> <span class="title">fib</span><span class="params">(n)</span> {</span>
+  <span class="keyword">var</span> a = <span class="number">1</span>, b = <span class="number">1</span>;
+  <span class="keyword">var</span> tmp;
+  <span class="keyword">while</span> (--n &gt;= <span class="number">0</span>) {
+    tmp = a;
+    a += b;
+    b = tmp;
+  }
+  <span class="keyword">return</span> a;
+}
+
+document.write(fib(<span class="number">10</span>));
+</pre></td></tr></table></figure>
+
+<h3 id="3-">3. 表格支持</h3>
+<p>示例：</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th style="text-align:right">价格</th>
+<th style="text-align:center">数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>计算机</td>
+<td style="text-align:right">$1600</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td>手机</td>
+<td style="text-align:right">$12</td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td>管线</td>
+<td style="text-align:right">$1</td>
+<td style="text-align:center">234</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-">4. 定义型列表</h3>
+<p>名词 1
+:   定义 1（左侧有一个可见的冒号和四个不可见的空格）</p>
+<p>代码块 2
+:   这是代码块的定义（左侧有一个可见的冒号和四个不可见的空格）</p>
+<pre><code>    代码块（左侧有八个不可见的空格）
+</code></pre><p><a href="http://www.zybuluo.com/mdeditor" title="作业部落旗下 Cmd 在线 Markdown 编辑阅读器" target="_blank">此文档转载自作业部落</a></p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/markdown,作业部落/">markdown,作业部落</a>
+  </div>
+
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://yoursite.com/2014/01/25/markdown基础语法/" data-title="MarkDown基础语法 | NetAnt" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2014/01/24/netant/"  title="NetAnt">
+ <strong>NEXT:</strong><br/> 
+ <span>NetAnt
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#markdown-"><span class="toc-number">1.</span> <span class="toc-text">Markdown 语法简明手册</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-"><span class="toc-number">1.0.1.</span> <span class="toc-text"> 表示斜体和粗体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 使用 === 表示一级标题，使用 --- 表示二级标题</span></a></li></ol></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#-"><span class="toc-number">2.</span> <span class="toc-text">这是一个一级标题</span></a></li><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#-"><span class="toc-number">2.1.</span> <span class="toc-text">这是一个二级标题</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-"><span class="toc-number">2.1.1.</span> <span class="toc-text">这是一个三级标题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-"><span class="toc-number">2.1.2.</span> <span class="toc-text">3. 使用 [描述](链接地址) 为文字增加外链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-"><span class="toc-number">2.1.3.</span> <span class="toc-text">4. 在行末加两个空格表示换行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-"><span class="toc-number">2.1.4.</span> <span class="toc-text">5. 使用 *，+，- 表示无序列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-"><span class="toc-number">2.1.5.</span> <span class="toc-text">6. 使用数字和点表示有序列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-"><span class="toc-number">2.1.6.</span> <span class="toc-text">7. 使用 &gt; 表示文字引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-"><span class="toc-number">2.1.7.</span> <span class="toc-text">8. 使用 `代码` 表示行内代码块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-"><span class="toc-number">2.1.8.</span> <span class="toc-text">9.  使用 四个缩进空格 表示代码块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-"><span class="toc-number">2.1.9.</span> <span class="toc-text">10.  使用 ![描述](图片链接地址) 插入图像</span></a></li></ol></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#cmd-"><span class="toc-number">3.</span> <span class="toc-text">Cmd 高阶语法手册</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-latex-"><span class="toc-number">3.0.1.</span> <span class="toc-text">1. LaTeX 公式，表达式支持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-"><span class="toc-number">3.0.2.</span> <span class="toc-text">2. 加强的代码块，支持四十一种编程语言的语法高亮的显示，行号显示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-"><span class="toc-number">3.0.3.</span> <span class="toc-text">3. 表格支持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-"><span class="toc-number">3.0.4.</span> <span class="toc-text">4. 定义型列表</span></a></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/markdown,作业部落/" title="markdown,作业部落">markdown,作业部落<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://zespia.tw/hexo/" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2014 
+		
+		<a href="http://yoursite.com" target="_blank" title="NetAnt">NetAnt</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+  </body>
+</html>
