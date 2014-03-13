@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[NetAnt]]></title>
-  <subtitle><![CDATA[一只网络小蚂蚁的开发之旅]]></subtitle>
+  <subtitle><![CDATA[Better to light one candle than to curse the darkness. 与其诅咒黑暗，不如燃起蜡烛]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://netant.org/"/>
-  <updated>2014-03-03T15:43:19.475Z</updated>
+  <updated>2014-03-13T12:56:23.554Z</updated>
   <id>http://netant.org/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://netant.org/2014/03/03/2014plan/"/>
     <id>http://netant.org/2014/03/03/2014plan/</id>
     <published>2014-03-03T15:38:40.000Z</published>
-    <updated>2014-03-03T15:42:50.000Z</updated>
+    <updated>2014-03-13T12:43:40.000Z</updated>
     <content type="html"><![CDATA[<h1 id="2014-">2014年度目标</h1>
 <hr>
 <p>从工作以后很少写目标了，感觉好茫然，过去的二年多，感觉就这样忙碌中过去，得到了什么？我也不知道，只是觉得进步的太慢。看得见的未来是多么可怕的一件事情...2014，我想迈大步...在这里拟定一下本年的目标：      </p>
@@ -73,7 +73,9 @@
 <li>有机会就找个女友吧~</li>
 </ul>
 </blockquote>
-<p>希望2014是厚积薄发的一年，希望我前二年的一些积累能有点质变，希望2014年终感觉充实</p>
+<p>希望2014是厚积薄发的一年，希望我前二年的一些积累能有点质变，希望2014年终感觉充实      </p>
+<hr>
+<p>以批判的态度去看博客，分享我们共同的知识. <a href="http://netant.org">http://netant.org</a></p>
 ]]></content>
     
     
@@ -88,7 +90,7 @@
     <link href="http://netant.org/2014/01/25/hexo%E5%B0%8F%E7%9F%A5%E8%AF%86%E9%9B%86%E9%94%A6/"/>
     <id>http://netant.org/2014/01/25/hexo小知识集锦/</id>
     <published>2014-01-25T05:08:58.000Z</published>
-    <updated>2014-01-29T04:33:23.000Z</updated>
+    <updated>2014-03-13T12:43:04.000Z</updated>
     <content type="html"><![CDATA[<p>在使用Hexo中会遇到很多小知识，在此汇总，并一直更新：  </p>
 <h5 id="1-markdown-">1.markdown基础教程</h5>
 <p>在我的博客里面就有一份<a href="http://ramencoder.github.io/2014/01/25/markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" target="_blank">基础教程</a>，大家可以去看看；  </p>
@@ -122,7 +124,7 @@
 
 <p>...未完待续</p>
 <hr>
-<p>以批判的态度去看博客，分享我们共同的知识. <a href="http://ramencoder.github.io/" target="_blank">http://ramencoder.github.io/</a>   </p>
+<p>以批判的态度去看博客，分享我们共同的知识. <a href="http://netant.org">http://netant.org</a> </p>
 ]]></content>
     
     
@@ -139,7 +141,7 @@
     <link href="http://netant.org/2014/01/25/mac%E4%B8%8B%E5%88%A9%E7%94%A8github%E5%92%8Chexo%E5%BB%BA%E7%AB%8B%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://netant.org/2014/01/25/mac下利用github和hexo建立个人博客/</id>
     <published>2014-01-25T03:42:45.000Z</published>
-    <updated>2014-01-27T13:09:51.000Z</updated>
+    <updated>2014-03-13T12:42:34.000Z</updated>
     <content type="html"><![CDATA[<p>昨天下午开始折腾在github pages上面使用Hexo建立个人博客，在网上看了很多帖子，自己也有一些误区，现已经完整的部署博客到github上，来写个完整的mac环境下的配置指南，供大家参考。  </p>
 <h2 id="-">配置总共分为以下几个步骤:</h2>
 <h3 id="1-mac-git-http-git-scm-com-node-js-http-www-nodejs-org-">1.为mac安装<a href="http://git-scm.com/" target="_blank">Git</a>以及<a href="http://www.nodejs.org/" target="_blank">Node.js</a></h3>
@@ -263,7 +265,7 @@
 <p>到这里网站的初步搭建已经完成，但是还是有很多东西等待大家去挖掘，比如页面的配置、RSS阅读、评论等，Now大家开始自己的Hexo之旅吧~  </p>
 <p>文章参考以下几个网站，在此一并感谢大家的创造和分享：<br><a href="https://github.com/tommy351/hexo/" target="_blank">Hexo GitHub</a><br><a href="http://zespia.tw/hexo/docs/index.html" target="_blank">Hexo Documentation</a><br><a href="http://yangjian.me/" target="_blank">Alimon&#39;s Blog</a></p>
 <hr>
-<p>以批判的态度去看博客，分享我们共同的知识. <a href="http://ramencoder.github.io/" target="_blank">http://ramencoder.github.io/</a>  </p>
+<p>以批判的态度去看博客，分享我们共同的知识. <a href="http://netant.org">http://netant.org</a></p>
 ]]></content>
     
     
