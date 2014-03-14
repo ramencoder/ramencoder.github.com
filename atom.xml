@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Better to light one candle than to curse the darkness. 与其诅咒黑暗，不如燃起蜡烛]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://netant.org/"/>
-  <updated>2014-03-13T13:09:15.790Z</updated>
+  <updated>2014-03-14T12:50:25.044Z</updated>
   <id>http://netant.org/</id>
   
   <author>
@@ -13,6 +13,107 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Android merge标签]]></title>
+    <link href="http://netant.org/2014/03/14/android-merge%E6%A0%87%E7%AD%BE/"/>
+    <id>http://netant.org/2014/03/14/android-merge标签/</id>
+    <published>2014-03-14T12:46:53.000Z</published>
+    <updated>2014-03-14T12:50:16.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="android-merge-">Android Merge标签</h1>
+<hr>
+<p><strong>Merge</strong>标签是Android新出来的一个标签(具体啥时候，不知道...)，主要的作用是在视图嵌套时候消除一些冗余的视图树节点，从而减少视图树的层级，加快加载速度，官方的介绍可以看<a href="http://developer.android.com/training/improving-layouts/reusing-layouts.html#Merge" target="_blank">这里</a>。<br>在Android官方文档中有一篇Blog有关于Merge的<a href="http://android-developers.blogspot.com/2009/03/android-layout-tricks-3-optimize-by.html" target="_blank">例子</a>，例子很简单，就是用普通的FrameLayout和Merge进行了对比。<br>下面我们使用<strong>Hierarchy View</strong>来查看视图树，看看使用二种布局的不同。  </p>
+<h3 id="1-framelayout-">1、使用FrameLayout布局</h3>
+<p>从ADT新建一个Android项目，在MainActivity中使用FrameLayout布局，布局如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="code"><pre><span class="tag">&lt;<span class="title">FrameLayout</span> <span class="attribute">xmlns:android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span>  
+    <span class="attribute">android:layout_width</span>=<span class="value">"fill_parent"</span>  
+    <span class="attribute">android:layout_height</span>=<span class="value">"fill_parent"</span>&gt;</span>  
+  
+    <span class="tag">&lt;<span class="title">ImageView</span>  
+        <span class="attribute">android:layout_width</span>=<span class="value">"fill_parent"</span>  
+        <span class="attribute">android:layout_height</span>=<span class="value">"fill_parent"</span>   
+        <span class="attribute">android:scaleType</span>=<span class="value">"fitXY"</span>  
+        <span class="attribute">android:src</span>=<span class="value">"@drawable/nice_day"</span> /&gt;</span>  
+  
+    <span class="tag">&lt;<span class="title">TextView</span>  
+        <span class="attribute">android:layout_width</span>=<span class="value">"wrap_content"</span>  
+        <span class="attribute">android:layout_height</span>=<span class="value">"wrap_content"</span>  
+        <span class="attribute">android:text</span>=<span class="value">"Nice Day"</span> /&gt;</span>  
+  
+<span class="tag">&lt;/<span class="title">FrameLayout</span>&gt;</span>
+</pre></td></tr></table></figure>
+
+<p>布局很简单，就是一个图片上面有行文字Nice Day。</p>
+<h3 id="2-hierarchy-view-">2、使用<strong>Hierarchy View</strong>查看视图树结构</h3>
+<p>Google ADT-&gt;sdk-&gt;tools-&gt;<strong>Hierarchy View.bat</strong>
+加载视图，可以看到如下的视图树：<br><img src="http://netant.qiniudn.com/hierarchy_viewer.png?imageView/1/w/300/h/300" alt="Framelayout视图树"><br><a href="http://netant.qiniudn.com/hierarchy_viewer.png" target="_blank">查看大图</a></p>
+<h3 id="3-merge-">3、使用Merge布局</h3>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="code"><pre><span class="tag">&lt;<span class="title">merge</span> <span class="attribute">xmlns:android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span>    &gt;</span>  
+  
+    <span class="tag">&lt;<span class="title">ImageView</span>  
+        <span class="attribute">android:layout_width</span>=<span class="value">"fill_parent"</span>  
+        <span class="attribute">android:layout_height</span>=<span class="value">"fill_parent"</span>   
+        <span class="attribute">android:scaleType</span>=<span class="value">"fitXY"</span>  
+        <span class="attribute">android:src</span>=<span class="value">"@drawable/nice_day"</span> /&gt;</span>  
+  
+    <span class="tag">&lt;<span class="title">TextView</span>  
+        <span class="attribute">android:layout_width</span>=<span class="value">"wrap_content"</span>  
+        <span class="attribute">android:layout_height</span>=<span class="value">"wrap_content"</span> 
+        <span class="attribute">android:layout_gravity</span>=<span class="value">"bottom"</span> 
+        <span class="attribute">android:text</span>=<span class="value">"Nice Day"</span> /&gt;</span>  
+  
+<span class="tag">&lt;/<span class="title">merge</span>&gt;</span>
+</pre></td></tr></table></figure>
+
+<h3 id="4-hierarchy-view-">4、使用使用<strong>Hierarchy View</strong>查看视图树结构</h3>
+<p><img src="http://netant.qiniudn.com/merge_view.png?imageView/1/w/300/h/300" alt="merge视图树"><br><a href="http://netant.qiniudn.com/merge_view.png" target="_blank">查看大图</a></p>
+<h3 id="5-">5、比较视图树</h3>
+<p>Framelayout布局的视图树如下：<br><img src="http://netant.qiniudn.com/framelayout.png?imageView/1/w/300/h/300" alt="Framelayout视图树"> 
+<a href="http://netant.qiniudn.com/framelayout.png" target="_blank">查看大图</a>      </p>
+<p>相比Merge的视图树如下：
+<img src="http://netant.qiniudn.com/merge.png?imageView/1/w/300/h/300" alt="merge视图树"> 
+<a href="http://netant.qiniudn.com/merge.png" target="_blank">查看大图</a>   </p>
+]]></content>
+    
+    
+      <category term="Android" scheme="http://netant.org/tags/Android/"/>
+    
+      <category term="merge标签" scheme="http://netant.org/tags/merge%E6%A0%87%E7%AD%BE/"/>
+    
+      <category term="Android笔记" scheme="http://netant.org/categories/Android%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[2014plan]]></title>
